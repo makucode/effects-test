@@ -1,0 +1,27 @@
+@use "@/styles/variables" as *;
+
+.TopSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .Content {
+        display: flex;
+        flex-direction: column;
+        gap: $padding-main;
+
+        h1 {
+            max-width: calc(50% - 2rem);
+
+            font-size: $h1;
+        }
+
+        p {
+            max-width: calc(50% - 2rem);
+
+            margin-left: auto;
+
+            font-size: $t1;
+        }
+    }
+}

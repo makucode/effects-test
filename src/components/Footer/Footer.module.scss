@@ -1,0 +1,18 @@
+@use "@/styles/variables" as *;
+
+.Footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin: $padding-main $padding-lr 0;
+    padding: $padding-main 0;
+
+    ul {
+        display: flex;
+        gap: 8px;
+
+        li {
+            list-style: none;
+        }
+    }
+}

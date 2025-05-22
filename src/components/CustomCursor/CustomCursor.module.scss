@@ -1,0 +1,53 @@
+@use "@/styles/variables" as *;
+
+.Cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: $z-cursor;
+
+    pointer-events: none;
+
+    transition: 0.15s ease-out all;
+
+    &::before {
+        display: block;
+
+        content: "";
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 100px;
+
+        color: $light;
+
+        backdrop-filter: invert(1) saturate(0);
+
+        transition: $eased-out;
+    }
+}
+
+.Hover {
+    &::before {
+        scale: 2;
+    }
+}
+
+/* .Cursor::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+    background-color: black;
+
+    mix-blend-mode: difference;
+    filter: invert(1);
+
+    pointer-events: none;
+
+    transition: transform 0.2s ease;
+}
+ */

@@ -1,0 +1,25 @@
+//  Colors
+$dark: #000000;
+$light: #ffffff;
+
+//  Font
+$h1: 7rem;
+
+$t1: 2.5rem;
+$t2: 1rem;
+
+// Paddings, Margins, Sizes
+$padding-main: 2rem;
+$padding-lr: 4rem;
+
+// Borders
+$radius-small: 10px;
+
+// Z-Index
+$z-cursor: 1000;
+
+//  Easings
+$eased: all 0.2s ease-in-out;
+$eased-out: all 0.15s ease-out;
+$eased-slow: all 0.3s ease-in-out;
+$eased-gentle: all 0.3s cubic-bezier(0.47, 0, 0.23, 1.38);
