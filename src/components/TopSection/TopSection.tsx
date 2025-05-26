@@ -1,6 +1,8 @@
 import React from "react";
+import Image from "next/image";
 
 import ScrollElement from "../ScrollElement/ScrollElement";
+import ScrollOut from "./ScrollOut/ScrollOut";
 
 import styles from "./TopSection.module.scss";
 
@@ -8,8 +10,18 @@ const TopSection = () => {
     return (
         <section className={styles.TopSection}>
             <div className={styles.Content}>
-                <h1>Lorem Ipsum</h1>
-                <ScrollElement />
+                <ScrollOut>
+                    <h1>Lorem Ipsum</h1>
+                </ScrollOut>
+                <div className={styles.Image}>
+                    <Image
+                        src={`https://picsum.photos/1440/1440?t=${Math.random()}`}
+                        width={2560}
+                        height={1440}
+                        alt="Scrollable Image - Random"
+                        sizes="(min-width: 1px) 50vw, 50vw"
+                    />
+                </div>
                 <ScrollElement
                     amount={0.5}
                     text={`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed

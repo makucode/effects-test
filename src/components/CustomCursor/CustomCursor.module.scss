@@ -26,12 +26,29 @@
         backdrop-filter: invert(1) saturate(0);
 
         transition: $eased-out;
+
+        opacity: 0;
     }
 }
 
 .Hover {
     &::before {
         scale: 2;
+    }
+}
+
+.Visible {
+    &::before {
+        animation: cursorIn 1s ease forwards;
+    }
+}
+
+@keyframes cursorIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 

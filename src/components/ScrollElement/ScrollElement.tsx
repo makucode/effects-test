@@ -14,10 +14,12 @@ const ScrollElement = ({
     amount = 1,
     text,
     leftText,
+    wide,
 }: {
     amount?: number;
     text?: string;
     leftText?: boolean;
+    wide?: boolean;
 }) => {
     const trigger = useRef(null);
     const ref = useRef(null);
@@ -30,7 +32,6 @@ const ScrollElement = ({
             {
                 y: 100 * amount,
                 opacity: 0,
-                blur: text ? 0 : 20,
             },
             {
                 y: 0,
@@ -39,7 +40,7 @@ const ScrollElement = ({
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: trigger.current,
-                    start: "start bottom", // Element ganz unten im Viewport starten
+                    start: "start 95%", // Element ganz unten im Viewport starten (start bottom & start 50%)
                     end: "start 50%",
                     scrub: true, // an Scroll-Position koppeln
                     /* markers: true, */
@@ -52,7 +53,7 @@ const ScrollElement = ({
         <div
             className={`${styles.ScrollElement} ${
                 leftText ? styles.LeftText : ""
-            }`}
+            } ${wide ? styles.Wide : ""}`}
             ref={trigger}
         >
             {text ? (
@@ -61,7 +62,7 @@ const ScrollElement = ({
                 <Image
                     ref={ref}
                     src={`https://picsum.photos/1440/1440?t=${Math.random()}`}
-                    width={1440}
+                    width={wide ? 2560 : 1440}
                     height={1440}
                     alt="Scrollable Image - Random"
                     sizes="(min-width: 1px) 50vw, 50vw"

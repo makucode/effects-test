@@ -10,6 +10,28 @@
         flex-direction: column;
         gap: $padding-main;
 
+        .Image {
+            display: block;
+
+            aspect-ratio: 16 / 9;
+
+            width: 100%;
+            max-width: 100%;
+
+            img {
+                display: block;
+
+                aspect-ratio: 16 / 9;
+
+                width: 100%;
+                height: auto;
+
+                object-fit: cover;
+
+                border-radius: $radius-small;
+            }
+        }
+
         h1 {
             max-width: calc(50% - 2rem);
 
@@ -23,5 +45,16 @@
 
             font-size: $t1;
         }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

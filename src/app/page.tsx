@@ -9,8 +9,8 @@ export default function Home() {
             <TopSection />
 
             <section className={styles.Col2}>
-                <ScrollElement amount={3} />
-                <ScrollElement amount={2} />
+                <ScrollElement amount={1.5} />
+                <ScrollElement amount={1} />
             </section>
 
             <section>
@@ -21,12 +21,12 @@ export default function Home() {
             </section>
 
             <section className={styles.Col2}>
-                <ScrollElement amount={2} />
-                <ScrollElement amount={3} />
+                <ScrollElement amount={1} />
+                <ScrollElement amount={1.5} />
             </section>
 
             <section>
-                <ScrollElement />
+                <ScrollElement wide />
             </section>
 
             <section>

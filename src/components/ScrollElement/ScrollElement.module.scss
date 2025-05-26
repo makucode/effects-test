@@ -29,3 +29,18 @@
         margin-left: auto;
     }
 }
+
+.Wide {
+    aspect-ratio: 16 / 9;
+
+    max-width: 100%;
+
+    img {
+        display: block;
+
+        aspect-ratio: 16 / 9;
+
+        width: 100%;
+        height: auto;
+    }
+}

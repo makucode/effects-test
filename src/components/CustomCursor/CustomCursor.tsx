@@ -8,12 +8,15 @@ const CustomCursor = () => {
     const cursorRef = useRef<HTMLDivElement>(null);
 
     const [isHovering, setIsHovering] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const cursor = cursorRef.current;
         if (!cursor) return;
 
         const move = (e: MouseEvent) => {
+            if (!isVisible) setIsVisible(true);
+
             const { width, height } = cursor.getBoundingClientRect();
             const offsetX = width / 2;
             const offsetY = height / 2;
@@ -32,6 +35,7 @@ const CustomCursor = () => {
         };
 
         document.addEventListener("mousemove", move);
+
         document.addEventListener("mouseover", checkHover);
         document.addEventListener("mouseout", checkHover);
 
@@ -45,7 +49,9 @@ const CustomCursor = () => {
     return (
         <div
             ref={cursorRef}
-            className={`${styles.Cursor} ${isHovering ? styles.Hover : ""}`}
+            className={`${styles.Cursor} ${isHovering ? styles.Hover : ""} ${
+                isVisible ? styles.Visible : ""
+            }`}
         />
     );
 };

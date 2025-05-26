@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import CustomCursor from "@/components/CustomCursor/CustomCursor";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider/SmoothScrollProvider";
+import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 import "@/styles/globals.scss";
@@ -27,8 +28,10 @@ export default function RootLayout({
             <body className={`${interSans.variable}`}>
                 <CustomCursor />
                 <SmoothScrollProvider>
-                    <main>{children}</main>
-                    <Footer />
+                    <Header>
+                        <main>{children}</main>
+                        <Footer />
+                    </Header>
                 </SmoothScrollProvider>
             </body>
         </html>

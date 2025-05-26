@@ -1,0 +1,81 @@
+@use "@/styles/variables" as *;
+
+$size: $padding-lr;
+
+.Header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    z-index: $z-nav;
+
+    pointer-events: none;
+
+    .Sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: $size;
+        height: 100vh;
+
+        border-right: 1px solid $dark;
+
+        background-color: $light;
+
+        pointer-events: all;
+
+        p {
+            display: inline-block;
+
+            font-size: 1.5rem;
+
+            transform: rotate(-90deg);
+
+            white-space: nowrap;
+        }
+    }
+
+    .Top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: $size;
+        width: 100%;
+
+        padding: $padding-main;
+
+        border-bottom: 1px solid $dark;
+
+        background-color: $light;
+
+        pointer-events: all;
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            ul {
+                li {
+                    list-style: none;
+
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.HeaderSpacer {
+    margin-top: $padding-lr;
+    margin-left: $size;
+}
