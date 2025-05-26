@@ -62,6 +62,8 @@ $size: $padding-lr;
         }
 
         nav {
+            flex-shrink: 0;
+
             ul {
                 li {
                     list-style: none;

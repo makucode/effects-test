@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import TextElement from "./TextElement/TextElement";
+
 import styles from "./Header.module.scss";
 
 const Header = ({ children }: { children: React.ReactNode }) => {
@@ -11,7 +13,7 @@ const Header = ({ children }: { children: React.ReactNode }) => {
                     <p>Lorem & Ipsum®</p>
                 </div>
                 <div className={styles.Top}>
-                    <p>Büro für Lorem und Ipsum</p>
+                    <TextElement />
                     <nav>
                         <ul>
                             <li>

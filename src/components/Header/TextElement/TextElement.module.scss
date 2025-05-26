@@ -1,0 +1,9 @@
+@use "@/styles/variables" as *;
+
+.TextElement {
+    width: calc(100% - 510px);
+
+    p {
+        width: 296px;
+    }
+}
